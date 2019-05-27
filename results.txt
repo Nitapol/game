@@ -1,0 +1,150 @@
+NegationMaximizePlayer NegationMaximizePlayer --games=10
+won 0 lost 0 draw 10
+total_time 15.291422266
+
+NegationMaximizePlayer NegationMaximizePlayer --games=100
+won 0 lost 0 draw 100
+total_time 160.311715946
+
+python main.py NegationMaximizePlayer RandomPlayer --games 10
+won 88 lost 0 draw 12
+total_time 79.541304292
+won 83 lost 0 draw 17
+total_time 80.96890171199999
+
+python main.py RandomPlayer NegationMaximizePlayer --games 10
+won 0 lost 90 draw 10
+total_time 80.112919992
+won 0 lost 90 draw 10
+total_time 78.285385254
+won 0 lost 88 draw 12
+total_time 78.941982911
+
+
+/usr/local/bin/python3.7 /Users/alex/PycharmProjects/game/pandas_doble_for_loop.py
+/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+7 ....rows
+/Users/alex/PycharmProjects/game/pandas_doble_for_loop.py:25: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  step1['keywords2'] = step1.keywords.str.split()
+/Users/alex/PycharmProjects/game/pandas_doble_for_loop.py:43: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  step4['search_words'] = w
+--- 0.4445171356201172 seconds ---
+womens 33
+book 90
+set 36
+microsoft 100
+fish 30
+sauce 54
+books 80
+from 45
+walmat 92
+store 40
+mens 40
+login 36
+for 36
+facebook 100
+fools 46
+mens 40
+login 36
+for 36
+facbook 93
+fools 46
+login 36
+for 36
+twetter 86
+boy 60
+apples 91
+from 45
+cook 68
+--- 0.43101978302001953 seconds ---
+
+/usr/local/bin/python3.7 /Users/alex/PycharmProjects/game/pandas_doble_for_loop.py
+7 ....rows
+--- 0.04493832588195801 seconds ---
+  search_words                       keywords
+0                      wlmart womens book set
+1       womens         wlmart womens book set
+2                      wlmart womens book set
+3          set         wlmart womens book set
+0                        microsoft fish sauce
+1         fish           microsoft fish sauce
+2        sauce           microsoft fish sauce
+0        books        books from walmat store
+1         from        books from walmat store
+2                     books from walmat store
+3        store        books from walmat store
+0         mens  mens login for facebook fools
+1        login  mens login for facebook fools
+2          for  mens login for facebook fools
+3               mens login for facebook fools
+4        fools  mens login for facebook fools
+0         mens   mens login for facbook fools
+1        login   mens login for facbook fools
+2          for   mens login for facbook fools
+3                mens login for facbook fools
+4        fools   mens login for facbook fools
+0        login          login for twetter boy
+1          for          login for twetter boy
+2      twetter          login for twetter boy
+3          boy          login for twetter boy
+0                            apples from cook
+1         from               apples from cook
+2         cook               apples from cook
+
+Process finished with exit code 0
+#############################################
+/usr/local/bin/python3.7 /Users/alex/PycharmProjects/game/pandas_double_for_loop_original.py
+7 ....rows
+/Users/alex/PycharmProjects/game/pandas_double_for_loop_original.py:18: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  step1['keywords2'] = step1.keywords.str.split()
+/Users/alex/PycharmProjects/game/pandas_double_for_loop_original.py:36: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  step4['search_words'] = w
+--- 0.4108889102935791 seconds ---
+  search_words                       keywords
+0                      wlmart womens book set
+1       womens         wlmart womens book set
+2                      wlmart womens book set
+3          set         wlmart womens book set
+0                        microsoft fish sauce
+1         fish           microsoft fish sauce
+2        sauce           microsoft fish sauce
+0        books        books from walmat store
+1         from        books from walmat store
+2                     books from walmat store
+3        store        books from walmat store
+0         mens  mens login for facebook fools
+1        login  mens login for facebook fools
+2          for  mens login for facebook fools
+3               mens login for facebook fools
+4        fools  mens login for facebook fools
+0         mens   mens login for facbook fools
+1        login   mens login for facbook fools
+2          for   mens login for facbook fools
+3                mens login for facbook fools
+4        fools   mens login for facbook fools
+0        login          login for twetter boy
+1          for          login for twetter boy
+2      twetter          login for twetter boy
+3          boy          login for twetter boy
+0                            apples from cook
+1         from               apples from cook
+2         cook               apples from cook
+
+Process finished with exit code 0
