@@ -102,49 +102,78 @@ cook 68
 
 Process finished with exit code 0
 #############################################
-/usr/local/bin/python3.7 /Users/alex/PycharmProjects/game/pandas_double_for_loop_original.py
-7 ....rows
-/Users/alex/PycharmProjects/game/pandas_double_for_loop_original.py:18: SettingWithCopyWarning:
-A value is trying to be set on a copy of a slice from a DataFrame.
-Try using .loc[row_indexer,col_indexer] = value instead
+--- 0.39608311653137207 seconds ---
+Estimation for 1 million rows and 2000 company names: 18861100 seconds or 5239 hours or 218 days
 
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  step1['keywords2'] = step1.keywords.str.split()
-/Users/alex/PycharmProjects/game/pandas_double_for_loop_original.py:36: SettingWithCopyWarning:
-A value is trying to be set on a copy of a slice from a DataFrame.
-Try using .loc[row_indexer,col_indexer] = value instead
+--- 0.04424095153808594 seconds ---
+Estimation for 1 million rows and 2000 company names: 2106711 seconds or 585 hours or 24 days
 
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  step4['search_words'] = w
---- 0.4108889102935791 seconds ---
-  search_words                       keywords
-0                      wlmart womens book set
-1       womens         wlmart womens book set
-2                      wlmart womens book set
-3          set         wlmart womens book set
-0                        microsoft fish sauce
-1         fish           microsoft fish sauce
-2        sauce           microsoft fish sauce
-0        books        books from walmat store
-1         from        books from walmat store
-2                     books from walmat store
-3        store        books from walmat store
-0         mens  mens login for facebook fools
-1        login  mens login for facebook fools
-2          for  mens login for facebook fools
-3               mens login for facebook fools
-4        fools  mens login for facebook fools
-0         mens   mens login for facbook fools
-1        login   mens login for facbook fools
-2          for   mens login for facbook fools
-3                mens login for facbook fools
-4        fools   mens login for facbook fools
-0        login          login for twetter boy
-1          for          login for twetter boy
-2      twetter          login for twetter boy
-3          boy          login for twetter boy
-0                            apples from cook
-1         from               apples from cook
-2         cook               apples from cook
+--- 0.0536351203918457 seconds --- + if max(process.extract(w, company_name_list), key=itemgetter(1))[1] >= 90:
+Estimation for 1 million rows and 2000 company names: 2554053 seconds or 709 hours or 29 days
 
-Process finished with exit code 0
+--- 0.033966064453125 seconds --- - fuzzed_data
+Estimation for 1 million rows and 2000 company names: 1617431 seconds or 449 hours or 18 days
+
+--- 0.01450490951538086 seconds --- - step 4
+Estimation for 1 million rows and 2000 company names: 690709 seconds or 191 hours or 7 days
+
+--- 0.007422924041748047 seconds --- - if max(process.extract(w, company_name_list), key=itemgetter(1))[1] >= 90:
+Estimation for 1 million rows and 2000 company names: 353472 seconds or 98 hours or 4 days
+
+--- 0.005852937698364258 seconds --- - pandas.DataFrame()
+Estimation for 1 million rows and 2000 company names: 278711 seconds or 77 hours or 3 days
+
+--- 0.0004520416259765625 seconds --- - step 3
+Estimation for 1 million rows and 2000 company names: 21525 seconds or 5 hours or 0 days
+
+--- 0.00025391578674316406 seconds --- double for loop
+Estimation for 1 million rows and 2000 company names: 12091 seconds or 3 hours or 0 days
+
+50 100 200 300,  400,  500,  600,  700,  800,  900, 1000
+            29,   57,   84,  117,  181,  228,  280,  338
+             2,    3,    4,    6,    9,   11,   17,   18
+             0.04, 0.08, 0.13, 0.20, 0.26, 0.36, 0.47, 0.57
+
+
+# 3.141592653589793
+# 1
+# 4.0 0.8584073464102069 3.04500000000707e-06 ( 3 2 )
+# 2.6666666666666665 0.4749259869231266 1.266999999999241e-06 ( 2 1 )
+# 0.0 3.141592653589793 1.1209999999928222e-06 ( 1 3 )
+# 10
+# 3.0418396189294024 0.09975303466039076 2.3789999999968003e-06 ( 3 1 )
+# 3.041839618929402 0.0997530346603912 1.48900000000729e-06 ( 2 2 )
+# 3.041839618929402 0.0997530346603912 1.3239999999969942e-06 ( 1 2 )
+# 100
+# 3.1315929035585537 0.00999975003123943 6.1849999999918914e-06 ( 3 1 )
+# 3.131592903558552 0.009999750031241206 5.437999999996501e-06 ( 2 3 )
+# 3.131592903558553 0.009999750031240318 5.399000000003151e-06 ( 1 2 )
+# 1000
+# 3.140592653839777 0.0009999997500163005 5.900899999999876e-05 ( 3 3 )
+# 3.1405926538397897 0.000999999750003422 5.6698999999993394e-05 ( 1 2 )
+# 3.140592653839793 0.0009999997500003133 5.671499999999885e-05 ( 2 1 )
+# 10000
+# 3.1414926535900194 9.999999977372553e-05 0.0005962649999999986 ( 3 3 )
+# 3.1414926535900367 9.999999975640605e-05 0.0005816240000000028 ( 2 2 )
+# 3.141492653590043 9.99999997501888e-05 0.0005812810000000029 ( 1 1 )
+# 100000
+# 3.141582653589785 1.0000000008059118e-05 0.005808460000000001 ( 2 3 )
+# 3.1415826535898224 9.999999970755624e-06 0.005812678000000002 ( 3 1 )
+# 3.1415826535897935 9.999999999621423e-06 0.005485008999999999 ( 1 2 )
+# 1000000
+# 3.1415916535908837 9.999989094566786e-07 0.05644273899999999 ( 1 1 )
+# 3.1415916535899084 9.999998846765834e-07 0.059649124 ( 3 2 )
+# 3.141591653589793 1.000000000139778e-06 0.056809723000000006 ( 2 3 )
+# 10000000
+# 3.141592553586459 1.0000333405812967e-07 0.5614685509999999 ( 3 3 )
+# 3.141592553588895 1.0000089822881364e-07 0.5485439619999999 ( 1 2 )
+# 3.141592553589793 1.0000000028043132e-07 0.5552569650000001 ( 2 1 )
+# 100000000
+# 3.1415926435801427 1.0009650441844542e-08 5.602099164 ( 1 3 )
+# 3.1415926445762157 9.013577439986875e-09 9.362494747 ( 2 1 )
+# 3.141592643589793 9.99999993922529e-09 9.613636385 ( 3 2 )
+# 1000000000
+# 3.1415926525807434 1.0090497326586956e-09 57.368639474999995 ( 1 2 )
+# 3.1415926445762157 9.013577439986875e-09 136.843637586 ( 2 3 )
+# 3.141592652589793 1.000000082740371e-09 139.87919127400002 ( 3 1 )
+# 10000000000

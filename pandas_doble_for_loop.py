@@ -33,5 +33,14 @@ for s in words_data_set.keywords.tolist():
         fuzzed_data = fuzzed_data.append(step4)
     fuzzed_data_final = fuzzed_data_final.append(fuzzed_data)
 
-print("--- %s seconds ---" % (time.time() - start_time))
+t = (time.time() - start_time)
+print("--- %s seconds ---" % t)
+rows = 1
+names = 2000
+e = t / len(words_data_set) / len(company_name_list) * rows * 1000000. * names
+h = e / 3600
+d = h / 24
+print('Estimation for %d million rows and %d company names: %d seconds or'
+      ' %d hours or %d days'
+      % (rows, names, e, h, d))
 print(fuzzed_data_final)
