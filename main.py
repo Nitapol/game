@@ -1,6 +1,7 @@
 # BOF#######################################################################BOF
 from game import Game
 from game_tic import GameTicTacToe
+from game_checkers import GameCheckers
 from player import PlayerHuman, PlayerRandom
 from player_negation import PlayerNegation
 from player_monte import PlayerMonte
@@ -38,7 +39,8 @@ if __name__ == '__main__':  # Testing ... #####################################
                 '-a'+s, '--arguments'+s, help='arguments for player'+s
             )
 
-        parser.add_argument('--verbose', '-v', action='store_true',
+        verbose = False
+        parser.add_argument('--verbose', '-v', action='store_false',
                             help='print an additional information')
         parser.add_argument('--silent', '-s', action='store_true',
                             help='print only the result at the end')
@@ -55,7 +57,6 @@ if __name__ == '__main__':  # Testing ... #####################################
         lost = 0
         draw = 0
         game_number = 0
-        verbose = True
         two_players = [get_player(args.player1)(args.arguments1),
                        get_player(args.player2)(args.arguments2)]
         for player in two_players:
@@ -65,9 +66,9 @@ if __name__ == '__main__':  # Testing ... #####################################
         while True:
             odd_game_number = game_number % 2 == 1
             if odd_game_number:
-                game = GameTicTacToe(player=Game.player2)
+                game = GameCheckers(player=Game.player2)
             else:
-                game = GameTicTacToe()
+                game = GameCheckers()
             if verbose:
                 game.print_game()
             state = game.get_state()

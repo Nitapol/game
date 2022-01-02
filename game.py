@@ -23,6 +23,7 @@ class Game(metaclass=ABCMeta):  # Game for two players. Abstract prototype. ###
 
     def get_player(self):
         return self._player
+
     def get_possible_moves(self) -> list:
         pass
 
